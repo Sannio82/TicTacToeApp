@@ -16,6 +16,7 @@
 		1345A56A274F8D720094C4EA /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345A569274F8D720094C4EA /* TicTacToeTests.swift */; };
 		1345A574274F8D720094C4EA /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345A573274F8D720094C4EA /* TicTacToeUITests.swift */; };
 		1345A576274F8D720094C4EA /* TicTacToeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345A575274F8D720094C4EA /* TicTacToeUITestsLaunchTests.swift */; };
+		1345A5C1275116620094C4EA /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1345A5C0275116620094C4EA /* PlayGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1345A56F274F8D720094C4EA /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1345A573274F8D720094C4EA /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		1345A575274F8D720094C4EA /* TicTacToeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1345A5C0275116620094C4EA /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1345A554274F8D630094C4EA /* SceneDelegate.swift */,
 				1345A556274F8D630094C4EA /* ViewController.swift */,
 				1345A558274F8D630094C4EA /* Main.storyboard */,
+				1345A5C0275116620094C4EA /* PlayGameViewController.swift */,
 				1345A55B274F8D710094C4EA /* Assets.xcassets */,
 				1345A55D274F8D710094C4EA /* LaunchScreen.storyboard */,
 				1345A560274F8D710094C4EA /* Info.plist */,
@@ -260,6 +263,7 @@
 			files = (
 				1345A557274F8D630094C4EA /* ViewController.swift in Sources */,
 				1345A553274F8D630094C4EA /* AppDelegate.swift in Sources */,
+				1345A5C1275116620094C4EA /* PlayGameViewController.swift in Sources */,
 				1345A555274F8D630094C4EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

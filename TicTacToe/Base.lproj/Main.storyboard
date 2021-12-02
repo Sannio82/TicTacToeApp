@@ -1,24 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W29-n5-hQz">
+                                <rect key="frame" x="53.5" y="128" width="307" height="79"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Tic Tac Toe">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="systemRedColor"/>
+                                            <font key="NSFont" metaFont="system" size="66"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageO" image="TictactoeO" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-qB-NdZ">
+                                <rect key="frame" x="20" y="519" width="200" height="158"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="lrP-xO-s4l"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="158" id="uLQ-mK-gGi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="NGs-d0-4cF" appends="YES" id="hlX-nO-jDG"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageX" image="TictactoeX" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-iw-3Uc">
+                                <rect key="frame" x="200" y="519" width="200" height="158"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="158" id="Esn-ke-eiV"/>
+                                    <constraint firstAttribute="height" constant="158" id="hcl-iM-UiH"/>
+                                    <constraint firstAttribute="width" constant="200" id="vAa-9U-Xv8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="vpG-5p-hsC"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uWJ-wa-vG2" appends="YES" id="wGk-yR-MKJ"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose side player 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvF-Ei-gh1">
+                                <rect key="frame" x="27.5" y="229" width="359.5" height="48"/>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="43"/>
+                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3S-JZ-81c">
+                                <rect key="frame" x="170" y="767" width="75" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="I0L-rt-fV6"/>
+                                    <constraint firstAttribute="width" constant="75" id="hJx-f8-VBB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GO">
+                                    <fontDescription key="titleFontDescription" type="italicSystem" pointSize="34"/>
+                                    <color key="baseForegroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sfb-M2-7MC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="tintColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="aaT-qB-NdZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3Tq-6L-HlP"/>
+                            <constraint firstItem="aaT-qB-NdZ" firstAttribute="top" secondItem="KBu-iw-3Uc" secondAttribute="top" id="4gB-b7-Ojg"/>
+                            <constraint firstItem="yvF-Ei-gh1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xB-6P-FgP"/>
+                            <constraint firstItem="W29-n5-hQz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="Dcb-G0-Ljg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W3S-JZ-81c" secondAttribute="bottom" constant="40" id="MJR-mD-5BG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W3S-JZ-81c" secondAttribute="bottom" constant="40" id="No7-vR-slF"/>
+                            <constraint firstItem="W29-n5-hQz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ty2-9a-ifh"/>
+                            <constraint firstItem="W3S-JZ-81c" firstAttribute="top" secondItem="aaT-qB-NdZ" secondAttribute="bottom" constant="90" id="V1D-87-mjU"/>
+                            <constraint firstItem="W3S-JZ-81c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="170" id="bdL-y8-1Ur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W3S-JZ-81c" secondAttribute="trailing" constant="169" id="d42-Bi-MrY"/>
+                            <constraint firstItem="yvF-Ei-gh1" firstAttribute="top" secondItem="W29-n5-hQz" secondAttribute="bottom" constant="22" id="es5-eg-8Ip"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KBu-iw-3Uc" secondAttribute="trailing" constant="14" id="hbX-7R-mMC"/>
+                            <constraint firstItem="aaT-qB-NdZ" firstAttribute="bottom" secondItem="KBu-iw-3Uc" secondAttribute="bottom" id="o9q-7B-h7w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageO" destination="aaT-qB-NdZ" id="ojD-WU-8bp"/>
+                        <outlet property="imageX" destination="KBu-iw-3Uc" id="CPg-70-NSt"/>
+                        <segue destination="pi6-vb-agN" kind="show" identifier="segueToPlayView" id="WVM-NN-bAQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="NGs-d0-4cF">
+                    <connections>
+                        <action selector="imageOTapped:" destination="BYZ-38-t0r" id="6ze-j0-CV0"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="uWJ-wa-vG2">
+                    <connections>
+                        <action selector="imageXTapped:" destination="BYZ-38-t0r" id="kfY-mZ-nfS"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+        <!--Play Game View Controller-->
+        <scene sceneID="o4f-UC-FVi">
+            <objects>
+                <viewController id="pi6-vb-agN" customClass="PlayGameViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="99v-oj-zBG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tic tac toe background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOS-hy-VQe">
+                                <rect key="frame" x="20" y="0.0" width="374" height="780"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bnb-v5-tCk">
+                                <rect key="frame" x="33" y="215" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="VZx-Zt-7A8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lk-He-Xn5">
+                                <rect key="frame" x="162" y="215" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="3I3-Fx-Bru"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deP-f3-Lcu">
+                                <rect key="frame" x="287" y="346" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="A9g-rZ-2x1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKI-Cb-d6o">
+                                <rect key="frame" x="287" y="473" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="Uq9-VB-AyT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-jg-mTu">
+                                <rect key="frame" x="162" y="473" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="5ln-wO-xUq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30u-HF-CC1">
+                                <rect key="frame" x="162" y="346" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="flR-zH-lcw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaT-Ab-aMD">
+                                <rect key="frame" x="33" y="346" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="9CU-VQ-7Ik"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vn3-l2-uYI">
+                                <rect key="frame" x="33" y="473" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="bwv-95-7Ku"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDv-zR-pL3">
+                                <rect key="frame" x="138" y="110" width="151" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Play Again">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="25" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playAgain:" destination="pi6-vb-agN" eventType="touchUpInside" id="SB7-Ir-YFp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxi-pw-paU">
+                                <rect key="frame" x="149" y="49" width="116" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="3" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWI-uB-1Nl">
+                                <rect key="frame" x="287" y="215" width="92" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="pi6-vb-agN" eventType="touchUpInside" id="2wc-tz-xSc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FpY-d1-tF2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YOS-hy-VQe" firstAttribute="leading" secondItem="FpY-d1-tF2" secondAttribute="leading" constant="20" id="9BV-kE-jTm"/>
+                            <constraint firstItem="FpY-d1-tF2" firstAttribute="bottom" secondItem="YOS-hy-VQe" secondAttribute="bottom" constant="28" id="HKJ-F2-fXj"/>
+                            <constraint firstItem="YOS-hy-VQe" firstAttribute="top" secondItem="FpY-d1-tF2" secondAttribute="top" id="Lel-pO-VsY"/>
+                            <constraint firstItem="FpY-d1-tF2" firstAttribute="trailing" secondItem="YOS-hy-VQe" secondAttribute="trailing" constant="20" id="n9N-O9-pP0"/>
+                            <constraint firstItem="YOS-hy-VQe" firstAttribute="centerX" secondItem="99v-oj-zBG" secondAttribute="centerX" id="yLw-pD-kAh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uwH-rQ-m00"/>
+                    <connections>
+                        <outlet property="buttonPlayAgain" destination="sDv-zR-pL3" id="zCh-SU-khZ"/>
+                        <outlet property="label" destination="Fxi-pw-paU" id="oss-MI-1yc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jtT-M0-cVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697.10144927536237" y="92.410714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tic tac toe background" width="612" height="612"/>
+        <image name="TictactoeO" width="200" height="200"/>
+        <image name="TictactoeX" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
