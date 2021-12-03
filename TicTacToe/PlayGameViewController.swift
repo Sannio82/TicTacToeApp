@@ -24,21 +24,18 @@ class PlayGameViewController: UIViewController {
    override func viewDidLoad() {
         super.viewDidLoad()
        label.text = "You chose \(player1)"
-        
    }
- 
-            
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
-    
+        
         if(gameState[(sender as AnyObject).tag-1] == 0 && gameIsActive == true) {
             gameState[(sender as AnyObject).tag-1] = activePlayer
                 if (activePlayer == 1) {
-                    (sender as AnyObject).setImage(UIImage(named: "X2"), for: UIControl.State())
+                    (sender as AnyObject).setImage(UIImage(named: "TictactoeXEdited"), for: UIControl.State())
                     activePlayer = 2
                     print(activePlayer)
                 }else {
-                    (sender as AnyObject).setImage(UIImage(named: "O2"), for:
+                    (sender as AnyObject).setImage(UIImage(named: "TictactoeOEdited"), for:
                         UIControl.State())
                     activePlayer = 1
                     print(activePlayer)
@@ -81,7 +78,7 @@ class PlayGameViewController: UIViewController {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = 1
-        buttonPlayAgain.isHidden = true
+        //buttonPlayAgain.isHidden = true
         label.isHidden = true
         
         for i in 1...9 {
@@ -91,3 +88,4 @@ class PlayGameViewController: UIViewController {
     }
  
 }
+

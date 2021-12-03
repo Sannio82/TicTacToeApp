@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func imageOTapped(_ sender: Any) {
+        imageO.isHighlighted = true
         player1 = "O"
     }
     
