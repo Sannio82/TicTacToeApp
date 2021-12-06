@@ -42,9 +42,9 @@ class PlayGameViewController: UIViewController {
                 gameIsActive = false
                 
                 if gameState[combination[0]] == 1 {
-                    label.text = ("Cross has won!")
+                    label.text = ("X won!")
                 }else{
-                label.text = ("Circle has won!")
+                label.text = ("O won!")
             }
                 
                 if gameIsActive == true {
@@ -75,6 +75,10 @@ class PlayGameViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == segueToFirstVC {
+            reset()
+    }
+    
+    func reset() {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = 1
@@ -87,7 +91,8 @@ class PlayGameViewController: UIViewController {
         }
         }
     }
-    }
+}
+    
 
 
 
