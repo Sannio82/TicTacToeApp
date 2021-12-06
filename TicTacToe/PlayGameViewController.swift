@@ -20,6 +20,8 @@ class PlayGameViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: AnyObject) {
         
+        buttonPlayAgain.isHidden = true
+        label.isHidden = true
         if(gameState[(sender as AnyObject).tag-1] == 0 && gameIsActive == true) {
             gameState[(sender as AnyObject).tag-1] = activePlayer
                 if (activePlayer == 1) {
@@ -76,7 +78,7 @@ class PlayGameViewController: UIViewController {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = 1
-        //buttonPlayAgain.isHidden = true
+        buttonPlayAgain.isHidden = true
         label.isHidden = true
         
         for i in 1...9 {
@@ -86,18 +88,7 @@ class PlayGameViewController: UIViewController {
         }
     }
     }
- 
 
-
-//
-//
-//    {
-//
-//               performSegue(withIdentifier: segueToFirstVC, sender: self)
-//
-//        }
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == segueToFirstVC
 
 
 
