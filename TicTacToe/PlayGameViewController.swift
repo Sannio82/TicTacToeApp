@@ -1,9 +1,3 @@
-//
-//  PlayGameViewController.swift
-//  TicTacToe
-//
-//  Created by Susanna Johansson on 2021-11-26.
-//
 
 import UIKit
 
@@ -17,9 +11,7 @@ class PlayGameViewController: UIViewController {
     var gameIsActive = true
     let winningCombinations = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     var player1 = ""
-    
-   
-    
+    let segueToFirstVC = "segueToFirstVC"
     
    override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,13 +26,13 @@ class PlayGameViewController: UIViewController {
                     (sender as AnyObject).setImage(UIImage(named: "TictactoeXEdited"), for: UIControl.State())
                     activePlayer = 2
                     print(activePlayer)
-                }else {
+                }else{
                     (sender as AnyObject).setImage(UIImage(named: "TictactoeOEdited"), for:
                         UIControl.State())
                     activePlayer = 1
                     print(activePlayer)
                 }
-            
+
     }
         
         for combination in winningCombinations {
@@ -75,6 +67,12 @@ class PlayGameViewController: UIViewController {
     
     @IBAction func playAgain(_ sender: Any) {
         
+        performSegue(withIdentifier: segueToFirstVC, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == segueToFirstVC {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         gameIsActive = true
         activePlayer = 1
@@ -85,7 +83,21 @@ class PlayGameViewController: UIViewController {
             let button = view.viewWithTag(i) as! UIButton
             button.setImage(nil, for: UIControl.State())
         }
+        }
+    }
     }
  
-}
+
+
+//
+//
+//    {
+//
+//               performSegue(withIdentifier: segueToFirstVC, sender: self)
+//
+//        }
+//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            if segue.identifier == segueToFirstVC
+
+
 

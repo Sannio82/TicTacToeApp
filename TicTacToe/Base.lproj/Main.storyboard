@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W29-n5-hQz">
-                                <rect key="frame" x="53.5" y="128" width="307" height="79"/>
+                                <rect key="frame" x="53.5" y="84" width="307" height="79"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Tic Tac Toe">
                                         <attributes>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageO" image="TictactoeO" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-qB-NdZ">
-                                <rect key="frame" x="20" y="519" width="200" height="158"/>
+                                <rect key="frame" x="20" y="465" width="200" height="158"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="lrP-xO-s4l"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageX" image="TictactoeX" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-iw-3Uc">
-                                <rect key="frame" x="200" y="519" width="200" height="158"/>
+                                <rect key="frame" x="200" y="465" width="200" height="158"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="158" id="Esn-ke-eiV"/>
@@ -53,13 +53,13 @@
                                 </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose side player 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvF-Ei-gh1">
-                                <rect key="frame" x="27.5" y="229" width="359.5" height="48"/>
+                                <rect key="frame" x="27.5" y="185" width="359.5" height="48"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="43"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3S-JZ-81c">
-                                <rect key="frame" x="170" y="767" width="75" height="55"/>
+                                <rect key="frame" x="170" y="713" width="75" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="I0L-rt-fV6"/>
                                     <constraint firstAttribute="width" constant="75" id="hJx-f8-VBB"/>
@@ -93,6 +93,7 @@
                             <constraint firstItem="aaT-qB-NdZ" firstAttribute="bottom" secondItem="KBu-iw-3Uc" secondAttribute="bottom" id="o9q-7B-h7w"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ykq-dz-PAW"/>
                     <connections>
                         <outlet property="imageO" destination="aaT-qB-NdZ" id="ojD-WU-8bp"/>
                         <outlet property="imageX" destination="KBu-iw-3Uc" id="CPg-70-NSt"/>
@@ -221,6 +222,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="playAgain:" destination="pi6-vb-agN" eventType="touchUpInside" id="SB7-Ir-YFp"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="segueToFirstVC" id="BzH-87-dAn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fxi-pw-paU">
